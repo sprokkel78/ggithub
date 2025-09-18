@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=gGithub
+Exec=/usr/bin/ggithub
+Comment=Github GUI Client
+Terminal=false
+Icon=/usr/share/ggithub-sprokkel78/github.svg
+Type=Application
