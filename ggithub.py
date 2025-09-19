@@ -22,6 +22,7 @@ class BrowserWindow(Gtk.Application):
         GLib.set_application_name("gGithub")
 
     def do_activate(self):
+        global win
         win=Gtk.ApplicationWindow(application=self, title="ggithub")
         win.set_default_size(800, 600)
         win.connect("key-press-event", Key_Event)
@@ -33,7 +34,7 @@ class BrowserWindow(Gtk.Application):
         # Create WebsiteDataManager with custom directories
         data_manager = WebKit2.WebsiteDataManager(base_cache_directory=cache_dir, base_data_directory=cache_dir)
 
-	# Create a web context for the WebView
+	    # Create a web context for the WebView
         context = WebKit2.WebContext.new_with_website_data_manager(data_manager)
 
         # Get the cookie manager
@@ -50,7 +51,7 @@ class BrowserWindow(Gtk.Application):
         webview.load_uri("https://www.github.com")
         webview.set_zoom_level(1.2)
 
-	# Scrolled window (optioneel)
+	    # Scrolled window (optioneel)
         scrolled = Gtk.ScrolledWindow()
         scrolled.add(webview)
 
