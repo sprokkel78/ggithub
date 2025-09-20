@@ -11,7 +11,7 @@ mkdir -p /usr/share/ggithub-sprokkel78
 cp -r ./* /usr/share/ggithub-sprokkel78/
 echo "#!/bin/sh" > /usr/bin/ggithub
 echo "cd /usr/share/ggithub-sprokkel78" >> /usr/bin/ggithub
-echo "python3 ./ggithub.py" >> /usr/bin/ggithub
+echo "WEBKIT_USE_SINGLE_WEB_PROCESS=1 python3 ./ggithub.py" >> /usr/bin/ggithub
 cp ./ggithub.desktop /usr/share/applications/com.sprokkel78.ggithub.desktop
 chmod 755 /usr/bin/ggithub
 chmod 664 /usr/share/ggithub-sprokkel78/*
